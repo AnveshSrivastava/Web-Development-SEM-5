@@ -1,9 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <style>
+        .adi{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(98, 246, 68);
+            border: 5px solid blueviolet;
+        }
+    </style>
 </head>
 <body>
+    <div class="adi">
+        <button onclick="abes()">click</button>
+        <p id="aaa"></p>
+    </div>
     <script>
   //      function abes(){
     //        document.write("Hello World");
@@ -19,6 +30,10 @@
         var y = 20;
         add(x, y);
         subtract(y, x);
+
+        function abes(){
+            document.getElementById("aaa").innerHTML = "Hello World";
+        }
     </script>
 </body>
 </html>
