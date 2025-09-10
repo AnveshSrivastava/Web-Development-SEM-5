@@ -3,15 +3,24 @@
 <head>
     <style>
         .adi{
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             background-color: rgb(98, 246, 68);
             border: 5px solid blueviolet;
+        }
+        #class{
+            display: flex;
+            height: 500px;
+            width: 500px;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 5px solid black;
+            border-radius: 10%;
         }
     </style>
 </head>
 <body>
-    <div class="adi">
+    <!-- <div class="adi">
         <button onclick="abes()">click</button>
         <p id="aaa"></p>
     </div>
@@ -34,6 +43,26 @@
         function abes(){
             document.getElementById("aaa").innerHTML = "Hello World";
         }
+    </script> -->
+
+
+    <div id="class">
+        <button onclick="red()">Red</button>
+        <button onclick="green()">Green</button>
+        <button onclick="blue()">Blue</button>
+        <button onclick="purp()">Purple</button>
+    </div>
+    <script>
+        function red(){
+            document.getElementById("class").style.backgroundColor = "red";
+        }function green(){
+            document.getElementById("class").style.backgroundColor = "green";
+        }function blue(){
+            document.getElementById("class").style.backgroundColor = "blue";
+        }function purp(){
+            document.getElementById("class").style.backgroundColor = "purple";
+        }
+        
     </script>
 </body>
 </html>
