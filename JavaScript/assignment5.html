@@ -12,11 +12,15 @@
             font-size: 2rem;
             border-radius: 10%;
         }
+        #img{
+            width: 600px;
+            height: 300px;
+        }
     </style>
 </head>
 <body>
 
-    <center>
+    <!-- <center>
         <p style="font-size: 3rem; font-weight: bold;">
             Counter App
         </p>
@@ -47,6 +51,24 @@
                 alert("Minimum limit reached (1)");
             }
         }
-    </script>
+    </script> -->
+
+    <center>
+        <div class="box">
+            <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8MYGEo9akaxzT0h0wQt2wh7qaQEdjtPyFVQ&s">
+        </div>
+        <button onclick="dissapear()">Click Me</button>
+        <div class="box">
+            <img id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOyfWv6vjaWxaPm1xqNsy4qR351xI1bnIi0w&s">
+        </div>
+        <button onclick="change()">Click Me</button>
+        <script>
+            function dissapear() {
+                document.getElementById("img").style.display = "none";
+            }
+            function change() {
+                document.getElementById("img2").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQY9RaGIGtMbJE1VePWT9v5h1pDGySLvAnA&s";
+            }
+        </script>
 </body>
 </html>
