@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            font-size: 2rem;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <p style="font-size: 3rem; font-weight: bold;">
+            Counter App
+        </p>
+        <div class="box">
+            <button onclick="sub()">-</button>
+            <div id="c">1</div>
+            <button onclick="add()">+</button>
+        </div>
+    </center>
+
+    <script>
+        var x = 1;
+
+        function add() {
+            if (x < 10) {
+                x++;
+                document.getElementById("c").innerHTML = x;
+            } else {
+                alert("Maximum limit reached (10)");
+            }
+        }
+
+        function sub() {
+            if (x > 1) {
+                x--;
+                document.getElementById("c").innerHTML = x;
+            } else {
+                alert("Minimum limit reached (1)");
+            }
+        }
+    </script>
+</body>
+</html>
