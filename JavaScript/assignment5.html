@@ -2,20 +2,27 @@
 <html lang="en">
 <head>
     <style>
-        .box {
-            width: 500px;
-            height: 500px;
-            border: 5px solid black;
+        .box{
             display: flex;
+            justify-content: center;
             align-items: center;
-            justify-content: space-around;
+            margin-top: 2rem;
+        }
+        button{
+            width: 6rem;
+            height: 10rem;
             font-size: 2rem;
-            border-radius: 10%;
+            font-weight: bold;
+            border: 2px solid black;
+            cursor: pointer;
         }
-        #img{
-            width: 600px;
-            height: 300px;
+        #c{
+            font-size: 2rem;
+            font-weight: bold;
+            width: 3rem;
+            text-align: center;
         }
+
     </style>
 </head>
 <body>
@@ -53,7 +60,7 @@
         }
     </script> -->
 
-    <center>
+    <!-- <center>
         <div class="box">
             <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8MYGEo9akaxzT0h0wQt2wh7qaQEdjtPyFVQ&s">
         </div>
@@ -68,6 +75,40 @@
             }
             function change() {
                 document.getElementById("img2").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQY9RaGIGtMbJE1VePWT9v5h1pDGySLvAnA&s";
+            }
+        </script> -->
+
+        <!-- Working piano with 5 keys-->
+        <center>
+            <div class="box">
+                <button onclick="playC()">C</button>
+                <button onclick="playD()">D</button>
+                <button onclick="playE()">E</button>
+                <button onclick="playF()">F</button>
+                <button onclick="playG()">G</button>
+            </div>
+        </center>
+        <script>
+        
+            function playC() {
+                var audio = new Audio('mu1.mp3');
+                audio.play();
+            }
+            function playD() {
+                var audio = new Audio('mu1.mp3');
+                audio.play();
+            }
+            function playE() {
+                var audio = new Audio('mu2.mp3');
+                audio.play();
+            }
+            function playF() {
+                var audio = new Audio('mu3.mp3');
+                audio.play();
+            }
+            function playG() {
+                var audio = new Audio('mu4.mp3');
+                audio.play();
             }
         </script>
 </body>
