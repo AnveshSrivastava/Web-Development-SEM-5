@@ -12,7 +12,15 @@
         document.getElementById("id").innerHTML = arr;
         
         const car = new Array("Saab", "Volvo", "BMW");
+        car[1] = "Toyota";
         document.getElementById("id").innerHTML = car[1];
+
+        const person = {
+            firstName: "Anvesh",
+            lastName: "Srivastava",
+            age: 50
+        };
+        document.getElementById("id").innerHTML = person.lastName;
     </script>
 </body>
 </html>
