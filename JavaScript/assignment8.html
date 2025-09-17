@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple To-Do List</title>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    input, button { margin: 0.5rem; }
+    .completed { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+  <h2>To-Do List</h2>
+  <input id="title" placeholder="Task title" />
+  <button onclick="addTask()">Add</button>
+  <ul id="taskList"></ul>
+
+  <script>
+    
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    function saveTasks() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      renderTasks();
+    }
+
+    function addTask() {
+      const title = document.getElementById("title").value.trim();
+      if (!title) return;
+      tasks.push({ id: Date.now(), title, completed: false });
+      document.getElementById("title").value = "";
+      saveTasks();
+    }
+
+    function toggleComplete(id) {
+      tasks = tasks.map(t => t.id === id ? { ...t, completed: !t.completed } : t);
+      saveTasks();
+    }
+    function editTask(id) {
+      const newTitle = prompt("Edit task:");
+      if (newTitle) {
+        tasks = tasks.map(t => t.id === id ? { ...t, title: newTitle } : t);
+        saveTasks();
+      }
+    }
+
+    function deleteTask(id) {
+      tasks = tasks.filter(t => t.id !== id);
+      saveTasks();
+    }
+
+    function renderTasks() {
+      const list = document.getElementById("taskList");
+      list.innerHTML = "";
+      tasks.forEach(task => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <span class="${task.completed ? 'completed' : ''}"">
+            ${task.title}
+          </span>
+          <button onclick="editTask(${task.id})">Edit</button>
+          <button onclick="deleteTask(${task.id})">Delete</button>
+          <button onclick="toggleComplete(${task.id})">Complete</button>
+        `;
+        list.appendChild(li);
+      });
+    }
+    renderTasks();
+  </script>
+</body>
+</html>
