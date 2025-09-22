@@ -3,13 +3,18 @@
 <head>
 </head>
 <body>
+    <p id="abc"></p>
     <script>
-        const toy = new Object({
-            toy1 : "car",
-            toy2 : "doll",
-            toy3 : "ball"
-        });
-        document.write(toy.toy1);
+        class Car {
+            constructor(brand, model, year) {
+                this.brand = brand;
+                this.model = model;
+                this.year = year;
+            }
+        }
+
+            const myCar = new Car("Toyota", "Corolla", 2020);
+            document.getElementById("abc").innerHTML = myCar.brand + " " + myCar.model + " " + myCar.year;
     </script>
 </body>
 </html>
