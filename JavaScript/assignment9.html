@@ -1,141 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .container{
-            display: flex;
-            width: 60%;
-            margin: auto;
-            border: 2px solid black;
-            border-radius: 14px;
-            margin-top: 2rem;
-        }
-        .right{
-            width: 30%;
-            background-color: #094687;
-            color: white;
-            padding: 1rem;
-            border-top-left-radius: 14px;
-            border-bottom-left-radius: 14px;
-        }
-        .right img{
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            border: 5px solid white;
-        }
-        .left{
-            width: 50%;
-            padding: 1rem;
-        }
-        h3{
-            border-bottom: 2px solid white;
-            padding-bottom: 0.5rem;
-        }
-        .right ul{
-            list-style-type: none;
-        }
-        li{
-            margin-bottom: 0.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Richard Sanchez Resume</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.resume {
+  display: flex;
+  max-width: 1000px;
+  margin: 40px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.left-column {
+  width: 35%;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 30px;
+}
+
+.right-column {
+  width: 65%;
+  padding: 30px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  background-color: #bdc3c7;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 5px 0 45px;
+  font-weight: normal;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ecf0f1;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.right-column h3 {
+  border-bottom: 1px solid #ccc;
+  color: #2c3e50;
+}
+
+.right-column p {
+  margin-bottom: 15px;
+}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="right">
-            <img src="img1..jpg" alt="">
-            <h3>Contact</h3>
-            <ul>
-                <li>
-                    Email:
-                </li>
-                <li>
-                    Phone:
-                </li>
-                <li>
-                    Address:
-                </li>
-                <li>
-                    Website:
-                </li>
-            </ul>
-            <h3>Education</h3>
-            <ul>
-                <li>
-                    <h4>ABESEC</h4>
-                    <p>Masters of Technology (2023-27)</p>
-                </li>
-                <li>
-                    <h4>ABESEC</h4>
-                    <p>Bachelors of Technology (2019-23)</p>
-                </li>
-            </ul>
-            <h3>Skills</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>MongoDB</li>
-                <li>Git</li>
-            </ul>
-            <h3>Languages</h3>
-            <ul>
-                <li>English</li>
-                <li>Hindi</li>
-                <li>Spanish</li>
-            </ul>
+  <div class="resume">
+    <div class="left-column">
+      <div class="profile-pic"></div>
 
-        </div>
-        <div class="left">
-            <h1>Anvesh Srivastava</h1>
-            <h3>Profile</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum iste iusto culpa quos similique voluptatibus tempore quod voluptas. Quisquam accusamus quam nam in. Quis, eligendi tenetur magni, doloremque maiores accusamus quidem ex enim animi rerum autem provident saepe repellat tempora officia, doloribus earum quia sapiente in voluptatum corporis distinctio temporibus odio! A blanditiis nobis soluta recusandae quasi ut incidunt placeat laborum est! Natus ipsum ducimus dicta, provident similique, unde reiciendis debitis at qui voluptatum, animi architecto labore corporis quibusdam molestiae nemo reprehenderit obcaecati molestias doloremque dignissimos nesciunt ut ratione! Assumenda unde eligendi accusamus iste culpa nesciunt distinctio eius quasi illo..</p>
-            <h3>Work Experience</h3>
-            <ul>
-                <li>
-                    <h4>Intern at ABC Company</h4>
-                    <p>June 2022 - August 2022</p>
-                    <ul>
-                        <li>Worked on developing a web application using React and Node.js.</li>
-                        <li>Collaborated with a team of developers to design and implement new features.</li>
-                        <li>Participated in code reviews and contributed to improving code quality.</li>
-                    </ul>
-                </li>
-                <li>
-                    <h4>Freelance Web Developer</h4>
-                    <p>January 2021 - May 2022</p>
-                    <ul>
-                        <li>Developed and maintained websites for small businesses and individuals.</li>
-                        <li>Provided technical support and troubleshooting for clients.</li>
-                        <li>Managed project timelines and communicated with clients to ensure satisfaction.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3>References</h3>
-            <div style="display: flex; gap: 2rem;">
-                <div class="left">
-                    <h4>John Doe</h4>
-                    <p>Manager at ABC Company</p>
-                    <p>Email:
-            </div>
-                <div class="left">
-                    <h4>Jane Smith</h4>
-                    <p>Professor at ABESEC</p>
-                    <p>Email:
-                </div>
-        </div>
+      <section>
+        <h3>Contact</h3>
+        <p>📞 +123-456-7890</p>
+        <p>📧 hello@reallygreatsite.com</p>
+        <p>🏠 123 Anywhere St., Any City</p>
+        <p>🌐 www.reallygreatsite.com</p>
+      </section>
+
+      <section>
+        <h3>Education</h3>
+        <p><strong>2029 - 2030</strong><br/>Wardiere University<br/>Master of Business Management</p>
+        <p><strong>2025 - 2029</strong><br/>Wardiere University<br/>Bachelor of Business<br/>GPA: 3.4 / 4.0</p>
+      </section>
+
+      <section>
+        <h3>Skills</h3>
+        <ul>
+          <li>Teamwork</li>
+          <li>Public Relations</li>
+          <li>Project Management</li>
+          <li>Communication</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>French</li>
+        </ul>
+      </section>
     </div>
+
+    <div class="right-column">
+        <h1>Anvesh Srivastava</h1>
+        <h2>Information Technology</h2>
+      <section>
+        <h3>Profile</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis veritatis placeat, aspernatur iure dolore facilis velit quo reiciendis impedit aut magni nam laborum recusandae, repellat quam blanditiis modi perferendis veniam harum! Tempora accusantium, officia consequatur non eum aliquid velit ad amet atque repellat fugit consectetur quas quasi quibusdam aliquam! Ipsam?Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.</p>
+      </section>
+
+      <section>
+        <h3>Work Experience</h3>
+        <p><strong>2030 - Present</strong><br/>Borelcle Studio<br/>Marketing Manager<br/>Developed marketing strategies and managed campaigns.</p>
+        <p><strong>2029 - 2030</strong><br/>Fauguel Studio<br/>Marketing Associate<br/>Assisted in campaign development and market research.</p>
+        <p><strong>2025 - 2029</strong><br/>Dandell Studio<br/>Marketing Intern<br/>Supported marketing team and conducted research.</p>
+      </section>
+
+      <section>
+        <h3>References</h3>
+        <p><strong>Harper Richard</strong><br/>Senior Marketing Manager at Borelcle Studio<br/>📧 harper@reallygreatsite.com</p>
+        <p><strong>Emerson Fauguel</strong><br/>Marketing Director at Fauguel Studio<br/>📧 emerson@reallygreatsite.com</p>
+      </section>
+    </div>
+  </div>
 </body>
 </html>
