@@ -98,13 +98,9 @@ ul li {
       </section>
 
       <section>
-        <h3>Skills</h3>
-        <ul>
-          <li>Teamwork</li>
-          <li>Public Relations</li>
-          <li>Project Management</li>
-          <li>Communication</li>
-        </ul>
+        <!-- Dynamic skill section using a button and alert input type-->
+         <h3>Skills</h3>
+         <button onclick="addSkills()"></button>
       </section>
 
       <section>
@@ -117,7 +113,9 @@ ul li {
     </div>
 
     <div class="right-column">
-        <h1>Anvesh Srivastava</h1>
+      <!-- Custom naming using a button and alert input type -->
+        <button onclick="display()">Click to enter your name</button>
+        <h1 id="name"></h1>
         <h2>Information Technology</h2>
       <section>
         <h3>Profile</h3>
@@ -138,5 +136,20 @@ ul li {
       </section>
     </div>
   </div>
+
+  <script>
+    function display() {
+      let firstName = prompt('Enter your first name:'); 
+      let lastName = prompt('Enter your last name:'); 
+      document.getElementById('name').innerHTML = `${firstName} ${lastName}`;
+    }
+    document.getElementById("name").innerHTML = `${firstName} ${lastName}`;
+    
+
+    function addSkills() {
+      let newSkill = prompt("Enter new Skill");
+      document.getElementById("skill").innerHTML =
+    }
+  </script>
 </body>
 </html>
