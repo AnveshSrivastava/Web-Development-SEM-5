@@ -6,11 +6,13 @@
     <title>Document</title>
 </head>
 <body>
+    <p id="abe"></p>
     <script>
-        function add(a, b) {
-            return a+b;
+        let ob = () => {
+            return "Hello, World!";
         }
-        console.log(add(5, 3));
+        console.log(ob());
+        document.getElementById("abe").innerHTML = ob();
     </script>
 </body>
 </html>
