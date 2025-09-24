@@ -76,6 +76,20 @@ ul li {
 .right-column p {
   margin-bottom: 15px;
 }
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
   </style>
 </head>
 <body>
@@ -85,9 +99,9 @@ ul li {
 
       <section>
         <h3>Contact</h3>
-        <p>📞 +123-456-7890</p>
-        <p>📧 hello@reallygreatsite.com</p>
-        <p>🏠 123 Anywhere St., Any City</p>
+        <p>📞 1234567890</p>
+        <p>📧 anveshsrivastava@gmail.com</p>
+        <p id="address">Your Addresss</p>
         <p>🌐 www.reallygreatsite.com</p>
       </section>
 
@@ -98,9 +112,18 @@ ul li {
       </section>
 
       <section>
-        <!-- Dynamic skill section using a button and alert input type-->
          <h3>Skills</h3>
-         <button onclick="addSkills()"></button>
+         <ul>
+            <li id="s1">
+
+            </li>
+            <li id="s2">
+
+            </li>
+            <li id="s3">
+
+            </li>
+         </ul>
       </section>
 
       <section>
@@ -114,8 +137,7 @@ ul li {
 
     <div class="right-column">
       <!-- Custom naming using a button and alert input type -->
-        <button onclick="display()">Click to enter your name</button>
-        <h1 id="name"></h1>
+        <h1 id="name">Your Name</h1>
         <h2>Information Technology</h2>
       <section>
         <h3>Profile</h3>
@@ -137,19 +159,40 @@ ul li {
     </div>
   </div>
 
-  <script>
-    function display() {
-      let firstName = prompt('Enter your first name:'); 
-      let lastName = prompt('Enter your last name:'); 
-      document.getElementById('name').innerHTML = `${firstName} ${lastName}`;
-    }
-    document.getElementById("name").innerHTML = `${firstName} ${lastName}`;
-    
+  <!-- Form to put name adress and 3 skilld dynamically -->
+   
+<!-- Form to put name and 3 skills dynamically -->
+<div>
+  <form class="form">
+    <label for="">Name : </label>
+    <input type="text" id="name1" placeholder="Enter your name" /><br/><br/>
+    <label for="">Adress : </label>
+    <input type="text" id="adress1" placeholder="Enter your adress" /><br/><br/>
+    <label for="">Skill 1 : </label>
+    <input type="text" id="skill1Input" placeholder="Enter Skill 1" /><br/><br/>
+    <label for="">Skill 2 : </label>
+    <input type="text" id="skill2Input" placeholder="Enter Skill 2" /><br/><br/>
+    <label for="">Skill 3 : </label>
+    <input type="text" id="skill3Input" placeholder="Enter Skill 3" /><br/><br/>
+    <button type="button" onclick="putData()">Submit</button>
+  </form>
+</div>
 
-    function addSkills() {
-      let newSkill = prompt("Enter new Skill");
-      document.getElementById("skill").innerHTML = newSkill;
-    }
-  </script>
+<script>
+  function putData() {
+    let name = document.getElementById("name1").value;
+    document.getElementById("name").innerHTML = `${name}`;
+
+    let skill1 = document.getElementById("skill1Input").value;
+    let skill2 = document.getElementById("skill2Input").value;
+    let skill3 = document.getElementById("skill3Input").value;
+
+    document.getElementById("s1").innerHTML = skill1;
+    document.getElementById("s2").innerHTML = skill2;
+    document.getElementById("s3").innerHTML = skill3;
+    let adress = documemnt.getElementById("adress1").value;
+    document.getElementById("address").innerHtml = `${adress}`;
+  }
+</script>
 </body>
 </html>
