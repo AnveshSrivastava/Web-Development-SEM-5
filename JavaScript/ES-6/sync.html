@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        //synchronous code is executed line by line. It executes the next line of code only after the current line is completed.. So the reason 
+        console.log("1");
+        console.log("2");
+        console.log("3");
+        setTimeout(() => {
+            console.log("4");
+        }, 4000)
+        console.log("5")
+    </script>
+    
+</body>
+</html>
