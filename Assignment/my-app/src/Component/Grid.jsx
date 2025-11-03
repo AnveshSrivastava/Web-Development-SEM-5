@@ -6,13 +6,13 @@ function Grid() {
       <div class="container text-center">
         <div class="row">
           <div class="col">
-            <Card name = "Rahul" age ={10}/>
+            <Card name = "Pizza" age ={100.00} src = ""/>
           </div>
           <div class="col">
-            <Card name = "Anvesh" age ={20}/>
+            <Card name = "Maggie" age ={205.50} src = ""/>
           </div>
           <div class="col">
-            <Card name = "Sahu" age = {35}/>
+            <Card name = "Paneer" age = {350.12} src =""/>
           </div>
         </div>
       </div>
