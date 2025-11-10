@@ -1,25 +1,29 @@
-import React from 'react'
-import './Book.css'
-import { useState } from 'react';
-export default function Book(props) {
-  const [count, useCount] = useState(0);
-  function Increment() {
-    useCount(count + 1);
-  }
-  function Decrement() {
-    useCount(count - 1);
-  }
+import React, { useState } from "react";
+import "./Book.css";
+
+export default function Book({ name, price, image }) {
+  const [count, setCount] = useState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count > 0 ? count - 1 : 0);
+
   return (
-    <div>
-        <div id="book">
-            <img src="" alt="" />
-            <h1>Title : {props.name}</h1>
-            <h1>{props.price}</h1>
-            <button onClick={Increment}>+</button>
-            <button>{count}</button>
-            <button onClick={Decrement}>-</button>
-            <button>Buy Now</button>
-        </div>
+    <div className="book-card">
+      <img
+        src={image || "https://via.placeholder.com/150"}
+        alt={name}
+        className="book-image"
+      />
+      <h2 className="book-title">{name}</h2>
+      <p className="book-price">₹{price}</p>
+
+      <div className="book-controls">
+        <button onClick={decrement} className="btn quantity-btn">−</button>
+        <span className="count-display">{count}</span>
+        <button onClick={increment} className="btn quantity-btn">+</button>
+      </div>
+
+      <button className="btn buy-btn">Buy Now</button>
     </div>
-  )
+  );
 }
