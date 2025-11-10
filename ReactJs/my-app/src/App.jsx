@@ -5,6 +5,7 @@ import {Grid} from './Components/Grid'
 import { Card } from './Components/Card'
 import UseeState from './Components/UseeState'
 import Count from './Components/Count'
+import Link1 from './Components/Link1'
  function App() {
   return (
     <div>
@@ -12,6 +13,7 @@ import Count from './Components/Count'
       <Navbar1 />
       <Grid /> 
       <UseeState /> */}
+      <Link1 />
       <Count />
     </div>
   )
