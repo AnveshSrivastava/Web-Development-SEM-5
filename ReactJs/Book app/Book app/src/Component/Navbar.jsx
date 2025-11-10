@@ -1,23 +1,43 @@
 import React, { Component } from 'react'
 import './Navbar.css'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Signup from './Signup'
+import Login from './Login'
+
 export class Navbar extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <div>
+          <ul>
             <li>
-                <a href="#home">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-                <a href="#news">News</a>
+              <Link to="/news">News</Link>
             </li>
             <li>
-                <a href="#about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
-        </ul>
+            <li>
+              <Link to="/signup">Signup</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+          </ul>
+
+          {/* Route navigation */}
+          <div className="auth-links">
+            <Routes>
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     )
   }
